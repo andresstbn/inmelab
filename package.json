@@ -1,0 +1,25 @@
+{
+  "name": "inmelab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "install": "electron-rebuild",
+    "build:css": "postcss style.pcss -o style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.2.1",
+    "electron-rebuild": "^2.3.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "chart.js": "^2.9.4",
+    "postcss": "^8.2.4",
+    "serialport": "^9.0.6",
+    "tailwindcss": "^2.0.2"
+  }
+}
