@@ -21,6 +21,7 @@ function createWindow() {
             preload: path.join(__dirname, 'preload.js')
         }
     })
+    // mainWindow.removeMenu()
     mainWindow.loadFile('./index.html')
     mainWindow.on('closed', function () {
         mainWindow = null
@@ -29,11 +30,15 @@ function createWindow() {
     let peso
 
     ipcMain.handle('init-communication', (event, ...args) => {
-        const port = new SerialPort('COM9')
+        const port = new SerialPort('COM10', err => {
+            if(err){
+                console.log(err.message)
+            }
+        })
         port.on('data', function (data) {
             peso = bufferToFloat(data);
         })
-        return 
+        return null;
     })
 
     ipcMain.handle('get-weight', (event, ...args) => {

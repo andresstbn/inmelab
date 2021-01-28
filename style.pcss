@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+    button:focus, button:hover{
+        @apply outline-none;
+    }
+}
+
+@layer components{
+    .btn-main{
+        @apply w-full bg-blue-300 shadow py-2 
+    }
+    .btn-main:hover{
+        @apply shadow bg-gradient-to-r from-blue-800 to-blue-500 text-blue-50;
+        
+    }
+}
