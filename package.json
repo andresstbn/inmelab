@@ -2,24 +2,36 @@
   "name": "inmelab",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron .",
     "install": "electron-rebuild",
-    "build:css": "postcss style.pcss -o style.css"
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "webpack --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
     "electron": "^11.2.1",
-    "electron-rebuild": "^2.3.4"
+    "electron-rebuild": "^2.3.4",
+    "electron-reloader": "^1.2.0",
+    "mini-css-extract-plugin": "^1.3.4",
+    "svelte": "^3.31.2",
+    "svelte-loader": "^3.0.0",
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "autoprefixer": "^10.2.3",
     "chart.js": "^2.9.4",
     "postcss": "^8.2.4",
     "serialport": "^9.0.6",
+    "sqlite3": "^5.0.2",
+    "svelte-preprocess": "^4.6.9",
     "tailwindcss": "^2.0.2"
   }
 }

@@ -1,0 +1,18 @@
+<style global lang="postcss">
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    button:focus,
+    button:hover {
+      @apply outline-none;
+    }
+  }
+</style>
